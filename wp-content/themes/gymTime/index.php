@@ -1,2 +1,2 @@
 
-<?php echo 'TEST DEL TEST DEL xDTEST xD' ?>
+<?php echo 'HOLA DESD INDEX' ?>
