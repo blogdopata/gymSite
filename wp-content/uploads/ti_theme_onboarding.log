@@ -1,0 +1,14 @@
+[03/Jan/2020:21:51:32] (ℹ️): WordPress Instance Info:
+[03/Jan/2020:21:51:32] (ℹ️): Home URL : http://localhost/wp-gym
+[03/Jan/2020:21:51:32] (ℹ️): Site URL : http://localhost/wp-gym
+[03/Jan/2020:21:51:32] (ℹ️): WordPress Version : 5.3.2
+[03/Jan/2020:21:51:32] (ℹ️): Onboarding Version : 1.7.12
+[03/Jan/2020:21:51:32] (ℹ️): Multisite : No
+[03/Jan/2020:21:51:32] (ℹ️): Server Info : Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11
+[03/Jan/2020:21:51:32] (ℹ️): PHP Version : 7.3.11
+[03/Jan/2020:21:51:32] (ℹ️): HTTPS : No
+[03/Jan/2020:21:51:32] (ℹ️): PHP Max Execution Time : 120
+[03/Jan/2020:21:51:32] (ℹ️): PHP Max Input Vars : 1000
+[03/Jan/2020:21:51:32] (ℹ️): Max Upload Size : 41943040
+[03/Jan/2020:21:51:32] (ℹ️): Plugins:
+[03/Jan/2020:21:51:32] (ℹ️): [PLUGIN] Disable Gutenberg : v2.0 (Jeff Starr)
