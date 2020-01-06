@@ -1,6 +1,9 @@
 
 <?php echo 'Hola desde Page.php  (Seccion  paginas ) ' ?>
 
+<br>
+<br>
+
 <?php get_header();?>
 
 

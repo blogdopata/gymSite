@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <?php wp_head();?>
 </head>
 <body>
     
@@ -18,18 +19,21 @@
             </div>
             
             <nav>
+
                 <?php 
                     $args = array(
                         'theme_location' => 'menu-principal',
-                        'coontainer' => 'nav',
+                        'container' => 'nav',
                         'container_class' => 'menu-principal'
 
                     );
                     wp_nav_menu($args);
                 ?>
+                
             </nav>
         </div>
 
     </div>
 </header>
 
+<hr>

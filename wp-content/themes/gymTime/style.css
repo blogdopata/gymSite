@@ -12,6 +12,35 @@
 
 */
 
+:root{ 
+    /** Custom Properties  **/
+
+    /** FUENTES **/ 
+    --fuentePrincipal :'Staaliches', cursive;
+    --fuenteTexto:'Open Sans' , sans-serif;
+    --fuenteSecundaria: 'Raleway' , sans-serif;
+    /** COLORES **/ 
+    --colorPrimario: #ff5b00;
+    --grisOscuro: #2f2e2e;
+    --grisClaro: #ebebeb;
+    --blanco: #ffffff;
+    --black : #000;
+
+
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  /* 10px = 1rem */
+  }
 body{
-    background-color: rebeccapurple;
+    font-size:16px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+h1{
+    font-family: var(--fuentePrincipal);
 }
