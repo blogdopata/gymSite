@@ -18,19 +18,19 @@
 
             </div>
             
-            <nav>
+       
 
-                <?php 
-                    $args = array(
-                        'theme_location' => 'menu-principal',
-                        'container' => 'nav',
-                        'container_class' => 'menu-principal'
+            <?php 
+                $args = array(
+                    'theme_location' => 'menu-principal',
+                    'container' => 'nav',
+                    'container_class' => 'menu-principal'
 
-                    );
-                    wp_nav_menu($args);
-                ?>
+                );
+                wp_nav_menu($args);
+            ?>
                 
-            </nav>
+      
         </div>
 
     </div>

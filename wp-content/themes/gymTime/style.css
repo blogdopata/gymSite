@@ -12,35 +12,132 @@
 
 */
 
-:root{ 
+:root {
     /** Custom Properties  **/
-
-    /** FUENTES **/ 
-    --fuentePrincipal :'Staaliches', cursive;
-    --fuenteTexto:'Open Sans' , sans-serif;
-    --fuenteSecundaria: 'Raleway' , sans-serif;
-    /** COLORES **/ 
+    /** FUENTES **/
+    --fuentePrincipal: 'Staaliches', cursive;
+    --fuenteTexto: 'Open Sans', sans-serif;
+    --fuenteSecundaria: 'Raleway', sans-serif;
+    /** COLORES **/
     --colorPrimario: #ff5b00;
     --grisOscuro: #2f2e2e;
     --grisClaro: #ebebeb;
     --blanco: #ffffff;
-    --black : #000;
-
-
+    --black: #000;
 }
+
 html {
     box-sizing: border-box;
-    font-size: 62.5%;  /* 10px = 1rem */
-  }
-body{
-    font-size:16px;
-    font-size: 1.6rem;
-    line-height: 1.5;
+    font-size: 62.5%;
+    /* 10px = 1rem */
 }
-*, *:before, *:after {
-    box-sizing: inherit;
-  }
 
-h1{
+body {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1 {
     font-family: var(--fuentePrincipal);
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+h1 {
+    font-style: 6rem;
+}
+
+h2 {
+    font-style: 4.8rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.site-header {
+    background-color: var(--grisOscuro);
+    padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+    .barra-navegacion {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-principal {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .menu-principal {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .menu-principal .menu {
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu-principal li {
+        margin-right: 2rem;
+    }
+    .menu-principal li:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.menu-principal a {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-style: 2.2rem;
+    padding: .5rem;
+}
+
+@media (min-width: 768px) {
+    .menu-principal a {
+        font-style: 2.6rem;
+    }
+}
+
+.menu-principal .current_page_item {
+    border-bottom: 3px solid var(--colorPrimario);
 }
