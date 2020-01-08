@@ -130,13 +130,52 @@ img {
     color: var(--blanco);
     font-style: 2.2rem;
     padding: .5rem;
+    display: block;
 }
+
+
+/* Efecto  Menu awesome*/
 
 @media (min-width: 768px) {
     .menu-principal a {
         font-style: 2.6rem;
+        position: relative;
+        z-index: 1;
+    }
+    .menu-principal a:before,
+    .menu-principal a:after {
+        position: absolute;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 50%;
+        background-color: var(--colorPrimario);
+        z-index: -1;
+        transform: scaleX(0);
+        transition: transform .6s;
+    }
+    .menu-principal a:before {
+        top: 0;
+        transform-origin: left;
+    }
+    .menu-principal a:after {
+        top: 50%;
+        transform-origin: right;
+    }
+    .menu-principal a:hover::before {
+        transform: scaleX(1);
+    }
+    .menu-principal a:hover::after {
+        transform: scaleX(1);
     }
 }
+
+
+/* Fin efecto menu awesome */
+
+
+/* clase predefiinica d wp .current_page_item*/
 
 .menu-principal .current_page_item {
     border-bottom: 3px solid var(--colorPrimario);

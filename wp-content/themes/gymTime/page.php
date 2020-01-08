@@ -14,6 +14,11 @@
 
 <?php endwhile; ?>
 
+<hr>
+
+
+<h3> WTF</h3>
+
 
 
 <?php get_footer();?>
