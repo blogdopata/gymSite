@@ -1,11 +1,27 @@
+<footer class="site-fotter contenedor">
 
- <hr> 
-<footer class="site-fotter">
+    <hr />
 
-<p> SiteFooter ty</p>
+    <div class="contenedor-footer">
+
+        <?php 
+                $args = array(
+                    'theme_location' => 'menu-principal',
+                    'container' => 'nav',
+                    'container_class' => 'menu-principal'
+
+                );
+                wp_nav_menu($args);
+            ?>
+            <p class=copyright> Todos los Derechos Reservados . <?php echo get_bloginfo('name') . ' ' .date('Y'); ?> </p>
+
+
+    </div>
+
 
 </footer>
 
 
-    </body>
+</body>
+
 </html>
