@@ -91,6 +91,10 @@ img {
     padding: 2rem 0;
 }
 
+hr {
+    border: 1px solid var(--grisClaro);
+}
+
 @media (min-width: 768px) {
     .barra-navegacion {
         display: flex;
@@ -212,4 +216,31 @@ img {
 .slicknav_nav a:hover {
     background: transparent;
     color: var(--colorPrimario)
+}
+
+
+/* footer */
+
+.contenido-footer {
+    padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+    .contenido-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.site-footer .menu-principal {
+    display: block;
+}
+
+.site-footer a {
+    color: var(--black);
+    text-align: center;
+}
+
+.site-footer .menu-principal .current_page_item {
+    border: none;
 }

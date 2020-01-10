@@ -1,8 +1,8 @@
-<footer class="site-fotter contenedor">
+<footer class="site-footer contenedor">
 
     <hr />
 
-    <div class="contenedor-footer">
+    <div class="contenido-footer">
 
         <?php 
                 $args = array(
@@ -13,7 +13,7 @@
                 );
                 wp_nav_menu($args);
             ?>
-            <p class=copyright> Todos los Derechos Reservados . <?php echo get_bloginfo('name') . ' ' .date('Y'); ?> </p>
+            <p class=copyright> Todos los Derechos Reservados . <?php echo get_bloginfo('name') . ' ' .date('y'); ?> </p>
 
 
     </div>
