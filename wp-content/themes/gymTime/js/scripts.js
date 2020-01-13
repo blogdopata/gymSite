@@ -8,7 +8,4 @@ $(document).ready(() => {
         appendTo: '.site-header'
     })
 
-
-
-
 })

@@ -13,7 +13,8 @@
                 );
                 wp_nav_menu($args);
             ?>
-            <p class=copyright> Todos los Derechos Reservados . <?php echo get_bloginfo('name') . ' ' .date('y'); ?> </p>
+            
+            <p class="copyright"> Todos los Derechos Reservados . <?php echo get_bloginfo('name') . ' ' .date('Y'); ?> </p>
 
 
     </div>
