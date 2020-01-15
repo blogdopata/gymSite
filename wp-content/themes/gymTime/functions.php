@@ -1,4 +1,19 @@
+
+
+
 <?php 
+
+// Cuando el tema es activado 
+
+function gymfitness_setup(){
+
+    // Para habilitar imagenes destacadas
+
+
+
+}
+
+add_action( 'after_setup_theme', )
 
 
 // Menus de Navegación, para add más  usar el arreglo
@@ -14,16 +29,9 @@ function gym_menus(){
 
 add_action('init','gym_menus');
 
+
+
 // Scripts y Styles
-
-
-
-
-	
-
-
-
-
 function gymFitness_scripts_styles(){
 
 
@@ -34,7 +42,6 @@ function gymFitness_scripts_styles(){
 
     wp_enqueue_style('googleFont',"https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700,900|Staatliches&display=swap", array() ,'1.0.0');
 
-   
 
     //La hora de estilos principal
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize','googleFont'), '1.0.0');
