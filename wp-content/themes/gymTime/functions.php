@@ -8,12 +8,19 @@
 function gymfitness_setup(){
 
     // Para habilitar imagenes destacadas
+    add_theme_support('post-thumbnails');
 
-
-
+    // Agrega Imagenes de tamaño Personalizado
+    // usaar plugin Regenerate Thumbnails
+    add_image_size('square', 350, 350, true);
+    add_image_size('portrait', 350, 724, true);
+    add_image_size('cajas', 400, 375, true);
+    add_image_size('mediano', 700, 400, true);
+    add_image_size('blog',966, 644, true);
+    
 }
 
-add_action( 'after_setup_theme', )
+add_action( 'after_setup_theme','gymfitness_setup' );
 
 
 // Menus de Navegación, para add más  usar el arreglo
@@ -22,6 +29,9 @@ function gym_menus(){
     register_nav_menus(array(
         'menu-principal' => __( 'Menu Principal Sobrino' , 'gymfitness'),
         'menu-footer' => __( 'Menu de Footer Sobrino' , ' gymfitnes')
+
+
+
         
         ));
 
