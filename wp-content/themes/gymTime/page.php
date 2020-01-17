@@ -1,42 +1,28 @@
 <?php get_header();?>
 
 
+<main class="contenedor pagina seccion con-sidebar">
+    <div class="contenido-principal">
+    
+    
+    
+    <?php get_template_part('template-parts/paginas'); ?>
 
-<?php  while( have_posts() ): the_post(); ?>
-
-<h1> <?php the_title(); ?></h1>
-
-
-<?php 
-
-// para agregar la imagen se puede enviar d parametros lo sgt:
-// https://developer.wordpress.org/reference/functions/the_post_thumbnail/  
-    if(has_post_thumbnail() ):
-            the_post_thumbnail('blog');
-            
+        <hr>
 
 
-    //else:
-      //  echo 'No hay nada ';
-    endif;   
-    ?>
+        
 
+    </div>
 
-<?php the_content(); ?>
+ <?php get_sidebar() ?>
 
 
 
 
 
-<!--    Escribo por : <//? php the_author() ;  ?>  
-    <//?php  the_date(); ?>-->
+</main>
 
-<?php endwhile; ?>
-
-<hr>
-
-
-<h3> WTF</h3>
 
 
 
