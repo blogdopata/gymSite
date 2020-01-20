@@ -5,7 +5,7 @@
 /*
 * Template Name: Contenido Centrado (No Sidebar)
 */
-/* El contenido de arriba es para poder seleccionar otro tipo de plantilla */ 
+/* El contenido de arriba es para poder seleccionar otro tipo de plantilla,  Custom Template */ 
 get_header();?>
 
 
