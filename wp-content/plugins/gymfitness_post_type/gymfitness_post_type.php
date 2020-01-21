@@ -10,13 +10,16 @@
 
 */
 
+if(!defined('ABSPATH')) die(); // Para q nadie pueda acccedeer  a este  codigo
+ 
+
 // Registrar Custom Post Type
 function gymfitness_clases_post_type() {
 
 	$labels = array(
 		'name'                  => _x( 'Clases', 'Post Type General Name', 'gymfitness' ),
 		'singular_name'         => _x( 'Clase', 'Post Type Singular Name', 'gymfitness' ),
-		'menu_name'             => __( 'Clases', 'gymfitness' ),
+		'menu_name'             => __( 'Clases Perron', 'gymfitness' ),
 		'name_admin_bar'        => __( 'Clase', 'gymfitness' ),
 		'archives'              => __( 'Archivo', 'gymfitness' ),
 		'attributes'            => __( 'Atributos', 'gymfitness' ),
@@ -46,13 +49,13 @@ function gymfitness_clases_post_type() {
 		'label'                 => __( 'Clase', 'gymfitness' ),
 		'description'           => __( 'Clases para el Sitio Web', 'gymfitness' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'supports'              => array( 'title', 'editor', 'thumbnail'),//'custom-fields' ), // agregar campos en el panel 
 		'hierarchical'          => true, // true = post , false = paginas
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
-        'menu_position'         => 6,
-        'menu_icon'             => 'dashicons-welcome-learn-more',
+        'menu_position'         => 6, // posición de la pestaña en el panel
+        'menu_icon'             => 'dashicons-welcome-learn-more', // Iconos del menu del pannel
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
