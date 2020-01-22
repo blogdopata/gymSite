@@ -3,6 +3,15 @@
 
 <?php 
 
+
+
+/** Consukltas Reutilizables  */
+
+require get_template_directory() . '/inc/queries.php' ;
+
+
+
+/* Fin Consultas */
 // Cuando el tema es activado 
 
 function gymfitness_setup(){

@@ -45,6 +45,7 @@ function gymfitness_clases_post_type() {
 		'items_list_navigation' => __( 'Navegación de Clases', 'gymfitness' ),
 		'filter_items_list'     => __( 'Filtrar Clases', 'gymfitness' ),
 	);
+	
 	$args = array(
 		'label'                 => __( 'Clase', 'gymfitness' ),
 		'description'           => __( 'Clases para el Sitio Web', 'gymfitness' ),

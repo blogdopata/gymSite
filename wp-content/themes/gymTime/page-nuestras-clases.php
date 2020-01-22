@@ -5,15 +5,19 @@
 
 <main class="contenedor pagina seccion" >
 
-hahahaha
+
     <div class="contenido-principal">
        
         <?php get_template_part('template-parts/paginas'); ?>
-hahaha
-      
+
+        hahahaha
+        <?php  gymfitnesss_lista_clases() ;?>
+               
+
+
     </div>
 
-hahahah
+
 
 </main>
 
