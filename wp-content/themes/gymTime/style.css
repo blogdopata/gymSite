@@ -36,8 +36,17 @@
         font-size: 16px;
         font-size: 1.6rem;
         line-height: 2;
+        background-color: #EEEEEE;
     }
-    
+    @media (min-width: 768px) {
+        body{
+
+         /*   background-color: yellow;*/
+        }
+        
+    }
+
+
     *,
     *:before,
     *:after {
@@ -319,4 +328,89 @@
     .no-sidebar .contenido-principal{
         flex: 0 1 1000px;
 
+    }
+
+
+
+    /* Componentes de CARDS */
+
+    .lista-clases{
+        margin-top:4rem;
+        text-align: center;
+       /* display: block;*/
+    }
+    .card{
+        margin-bottom: 4rem;
+    }
+    
+    @media (min-width: 768px) {
+
+        .gradient::after{
+            content:'';
+            display: block;
+            position: absolute;
+            left:0;
+            top:0;
+            bottom:0;
+            right: 0;
+           /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+1,000000+100,000000+100,000000+100,000000+100&0+46,0.65+62,0.65+72,0.65+78,0.65+87,0.65+93,0.65+95,0.65+99,0.65+100,0.65+100,0.65+101 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 1%, rgba(0,0,0,0) 46%, rgba(0,0,0,0.65) 62%, rgba(0,0,0,0.65) 72%, rgba(0,0,0,0.65) 78%, rgba(0,0,0,0.65) 87%, rgba(0,0,0,0.65) 93%, rgba(0,0,0,0.65) 95%, rgba(0,0,0,0.65) 99%, rgba(0,0,0,0.65) 100%, rgba(0,0,0,0.65) 101%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 1%,rgba(0,0,0,0) 46%,rgba(0,0,0,0.65) 62%,rgba(0,0,0,0.65) 72%,rgba(0,0,0,0.65) 78%,rgba(0,0,0,0.65) 87%,rgba(0,0,0,0.65) 93%,rgba(0,0,0,0.65) 95%,rgba(0,0,0,0.65) 99%,rgba(0,0,0,0.65) 100%,rgba(0,0,0,0.65) 101%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 1%,rgba(0,0,0,0) 46%,rgba(0,0,0,0.65) 62%,rgba(0,0,0,0.65) 72%,rgba(0,0,0,0.65) 78%,rgba(0,0,0,0.65) 87%,rgba(0,0,0,0.65) 93%,rgba(0,0,0,0.65) 95%,rgba(0,0,0,0.65) 99%,rgba(0,0,0,0.65) 100%,rgba(0,0,0,0.65) 101%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
+        }
+        
+    }
+
+
+    @media (min-width: 768px) {
+        .lista-clases{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+        }
+        .card{
+        /*/flex: 0 0 calc(50% -2rem);*/
+        position: relative;
+            
+        }
+        
+    }
+    .card .contenido{
+            padding: 3rem ;
+    }
+    @media (min-width: 768px) {
+        .card .contenido{
+            position: absolute;
+            bottom: 0;
+            left:0;
+            text-align: left;
+            z-index: 2;
+
+        }
+        
+    }
+    .contenido{
+        text-align: center;
+    }
+    .card img{
+       /* display: block;*/
+        text-align: center;
+    }
+    .card .contenido h3{
+        line-height: 1;
+        color:var(--colorPrimario)
+    }
+    @media (min-width: 768px) {
+        .card .contenido h3{
+            color: var(--blanco);
+        }
+        
+    }
+    .card .contenido p{
+        font-weight: 700;
+        font-style: 2rem;
+        margin: 0;
+      
     }

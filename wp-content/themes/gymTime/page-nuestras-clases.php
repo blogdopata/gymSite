@@ -6,11 +6,11 @@
 <main class="contenedor pagina seccion" >
 
 
-    <div class="contenido-principal">
+    <div class="text-center">
        
         <?php get_template_part('template-parts/paginas'); ?>
 
-        hahahaha
+       
         <?php  gymfitnesss_lista_clases() ;?>
                
 
