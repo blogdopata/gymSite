@@ -329,6 +329,13 @@
         flex: 0 1 1000px;
 
     }
+/*  SINGLE CLASES */
+.informacion-clases{
+    font-weight: 700;
+    font-family: var(--fuenteSecundaria);
+    font-style: 2.2rem;
+    text-align: center;
+}
 
 
 
