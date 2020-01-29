@@ -89,7 +89,7 @@ function gymfitness_widgets(){
         'id' => 'sidebar_1',
         'before_widget' => '<div class="widget">',
         'after_widget'  => '</div>',
-        'before_title' =>  '<h3>',
+        'before_title' =>  '<h3 class="texto-primario text-center">',
         'after_title' => '</h3>'
 
     ));
@@ -99,7 +99,7 @@ function gymfitness_widgets(){
         'id' => 'sidebar_2',
         'before_widget' => '<div class="widget">',
         'after_widget'  => '</div>',
-        'before_title' =>  '<h3>',
+        'before_title' =>  '<h3 class="texto-primario text-center">',
         'after_title' => '</h3>'
 
     ));

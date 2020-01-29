@@ -8,7 +8,7 @@
 
         <?php  get_template_part('template-parts/paginas') ;?>
     </div>
-    <?php  get_sidebar() ;?>
+    <?php  get_sidebar('clases') ;?>
 </main>
 
 
