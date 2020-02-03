@@ -23,7 +23,7 @@ class GymFitness_Class_widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'foo_widget', // Base ID
-			esc_html__( 'GymFitness Clases', 'text_domain' ), // Name
+			esc_html__( 'GymFitness ClasesxD', 'text_domain' ), // Name
 			array( 'description' => esc_html__( 'agrega clases en el widget', 'text_domain' ), ) // Args
 		);
 	}
@@ -41,7 +41,57 @@ class GymFitness_Class_widget extends WP_Widget {
 		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
-		echo esc_html__( 'Hello, World!', 'text_domain' );
+       
+        //echo esc_html__( 'Hello, World!', 'text_domain' );
+        ?>
+        
+        <ul>
+        
+             <?php 
+                $args = array(
+                    'post_type'  => 'gymfitness_clases',
+                    'posts_per_page' =>  3,
+                    //orderby' => rand,
+
+                );
+
+                $clases = new WP_Query($args);
+                while($clases -> have_posts()): $clases->the_post();
+     
+             ?>
+
+             <li class="clase-sidebar">
+                <div>
+                    <?php the_post_thumbnail('thumbnail') ;?>
+                </div>
+                <div class="contenido-clase">
+                    <a href="<?php the_permalink() ?>">
+                        <h3><?php the_title() ;?></h3>
+                    </a>
+
+                    <?php 
+
+                    $hora_inicio =  get_field('hora_inicio');
+                    $hora_fin=  get_field('hora_fin');
+                    ?>
+
+
+                    <p><?php the_field('dias_clase') ;?> - <?php echo $hora_inicio . " a " . $hora_fin ;?> </p>
+
+
+
+                </div>
+
+             </li>
+
+             <?php endwhile; wp_reset_postdata(); ?>
+        </ul>
+        
+        
+        
+        <?php 
+        
+
 		echo $args['after_widget'];
 	}
 
@@ -53,12 +103,21 @@ class GymFitness_Class_widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'New title', 'text_domain' );
-		?>
-		<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'text_domain' ); ?></label> 
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
-		</p>
+        $cantidad = !empy($instance['cantidad']) ? $instance['cantidad'] : esc_html__('¿Cuantas Clases deseas mostrar?','gymfitness') ;
+        ?>
+        <p>
+            <label for="<?php echo esc_attr( $this->get_field_id('cantidad') ) ?>" >
+                    <?php  esc_attr_e('Cuantas Clases Deseas Mostrar??','gymfitness') ;?>
+            
+            </label>
+        
+        
+        
+        </p>
+        
+
+
+
 		<?php 
 	}
 
