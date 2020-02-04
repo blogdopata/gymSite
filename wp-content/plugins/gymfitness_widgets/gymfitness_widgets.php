@@ -22,7 +22,7 @@ class GymFitness_Class_widget extends WP_Widget {
 	 */
 	function __construct() {
 		parent::__construct(
-			'foo_widget', // Base ID
+			'GymFitness', // Base ID
 			esc_html__( 'GymFitness ClasesxD', 'text_domain' ), // Name
 			array( 'description' => esc_html__( 'agrega clases en el widget', 'text_domain' ), ) // Args
 		);
@@ -103,15 +103,22 @@ class GymFitness_Class_widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-        $cantidad = !empy($instance['cantidad']) ? $instance['cantidad'] : esc_html__('¿Cuantas Clases deseas mostrar?','gymfitness') ;
-        ?>
+
+        $cantidad = !empty($instance['cantidad'] ) ? $instance['cantidad'] : esc_html__('¿Cuantas Clases deseas mostrar?','gymfitness') ; ?>
         <p>
+
             <label for="<?php echo esc_attr( $this->get_field_id('cantidad') ) ?>" >
-                    <?php  esc_attr_e('Cuantas Clases Deseas Mostrar??','gymfitness') ;?>
+                    <?php  esc_attr_e('¿Cuantas Clases Deseas Mostrar zz?','gymfitness') ;?>
             
             </label>
-        
-        
+
+            <input 
+                class="widefat" 
+                id="<?php echo esc_attr( $this->get_field_id('cantidad') ) ?>"
+                name="<?php echo esc_attr( $this->get_field_id('cantidad') ) ?>"
+                type="number" 
+                value="<?php echo esc_attr('$cantidad') ?>"
+            />
         
         </p>
         
