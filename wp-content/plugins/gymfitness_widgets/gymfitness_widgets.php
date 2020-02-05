@@ -3,28 +3,30 @@
 /*
     Plugin Name:  Gym Fitneesss - Widgets
     Plugin URI:
-    Description: Añade Widgets Personaliadas al sitio Gym Fitnness
+    Description: Añade Widgets Personaliad0s al sitio Gym Fitnness
     Version: 1.0.0
     Author: Victor Caballero :D
     Author URI: https://twitter.com/vict0rcaballero
-    Text Domain: GymFitness
+    Text Domain: gymFitness
 
 */
 if(!defined('ABSPATH')) die(); // Para q nadie pueda acccedeer  a este  codigo
  
 /**
- * Adds GymFitness_Class_widget.
+ * Adds  GymFitness_Clases_Widget.
  */
-class GymFitness_Class_widget extends WP_Widget {
+
+
+class GymFitness_Clases_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'GymFitness', // Base ID
-			esc_html__( 'GymFitness ClasesxD', 'text_domain' ), // Name
-			array( 'description' => esc_html__( 'agrega clases en el widget', 'text_domain' ), ) // Args
+			'foo_widget', // Base ID
+			esc_html__( 'GymFitness Clases', 'text_domain' ), // Name
+			array( 'description' => esc_html__( 'Agrega Clases al  widget', 'text_domain' ), ) // Args
 		);
 	}
 
@@ -43,29 +45,36 @@ class GymFitness_Class_widget extends WP_Widget {
 		}
        
         //echo esc_html__( 'Hello, World!', 'text_domain' );
+
+        $cantidad = $instance['cantidad'];
+        if($cantidad == ''){
+            $cantidad= 3;
+        }
+
         ?>
         
         <ul>
         
              <?php 
-                $args = array(
+                $args = array( 
                     'post_type'  => 'gymfitness_clases',
-                    'posts_per_page' =>  3,
+                    'posts_per_page' =>  $cantidad
                     //orderby' => rand,
 
                 );
 
                 $clases = new WP_Query($args);
-                while($clases -> have_posts()): $clases->the_post();
+                while($clases->have_posts()): $clases->the_post();
      
              ?>
 
              <li class="clase-sidebar">
-                <div>
+                <div class="imagen">
                     <?php the_post_thumbnail('thumbnail') ;?>
                 </div>
+
                 <div class="contenido-clase">
-                    <a href="<?php the_permalink() ?>">
+                    <a href="<?php the_permalink(); ?>">
                         <h3><?php the_title() ;?></h3>
                     </a>
 
@@ -102,9 +111,11 @@ class GymFitness_Class_widget extends WP_Widget {
 	 *
 	 * @param array $instance Previously saved values from database.
 	 */
+
+
 	public function form( $instance ) {
 
-        $cantidad = !empty($instance['cantidad'] ) ? $instance['cantidad'] : esc_html__('¿Cuantas Clases deseas mostrar?','gymfitness') ; ?>
+        $cantidad = !empty( $instance['cantidad'] ) ? $instance['cantidad'] : esc_html__('¿Cuantas Clases deseas mostrar?','gymfitness');?>
         <p>
 
             <label for="<?php echo esc_attr( $this->get_field_id('cantidad') ) ?>" >
@@ -112,13 +123,7 @@ class GymFitness_Class_widget extends WP_Widget {
             
             </label>
 
-            <input 
-                class="widefat" 
-                id="<?php echo esc_attr( $this->get_field_id('cantidad') ) ?>"
-                name="<?php echo esc_attr( $this->get_field_id('cantidad') ) ?>"
-                type="number" 
-                value="<?php echo esc_attr('$cantidad') ?>"
-            />
+            <input class="widefat"  id="<?php echo esc_attr( $this->get_field_id('cantidad') ) ?>" name="<?php echo esc_attr( $this->get_field_id('cantidad') ) ?>" type="number" value="<?php echo esc_attr('$cantidad') ?>" />
         
         </p>
         
@@ -140,7 +145,7 @@ class GymFitness_Class_widget extends WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? sanitize_text_field( $new_instance['title'] ) : '';
+		$instance['cantidad'] = ( ! empty( $new_instance['cantidad'] ) ) ? sanitize_text_field( $new_instance['cantidad'] ) : '';
 
 		return $instance;
 	}
@@ -151,10 +156,10 @@ class GymFitness_Class_widget extends WP_Widget {
 
 // registrar el widget FooWidget
 
-function registrar_Gyfitenesss_widget() {
-    register_widget( 'GymFitness_Class_widget' );
+function gymfitness_registrar_widget() {
+    register_widget( 'GymFitness_Clases_Widget' );
 }
-add_action( 'widgets_init', 'registrar_Gyfitenesss_widget' );
+add_action( 'widgets_init', 'gymfitness_registrar_widget' );
 
 
 
