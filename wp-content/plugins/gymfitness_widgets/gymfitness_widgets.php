@@ -123,7 +123,7 @@ class GymFitness_Clases_Widget extends WP_Widget {
             
             </label>
 
-            <input class="widefat"  id="<?php echo esc_attr( $this->get_field_id('cantidad') ) ?>" name="<?php echo esc_attr( $this->get_field_id('cantidad') ) ?>" type="number" value="<?php echo esc_attr('$cantidad') ?>" />
+            <input class="widefat"  id="<?php echo esc_attr( $this->get_field_id('cantidad') ) ?>" name="<?php echo esc_attr( $this->get_field_id('cantidad') ) ?>" type="number" value="<?php echo esc_attr('$cantidad') ?>"  />
         
         </p>
         
