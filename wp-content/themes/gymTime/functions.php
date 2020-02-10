@@ -78,7 +78,7 @@ function gymFitness_scripts_styles(){
     wp_enqueue_script('slicknavJS', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), null );
 
     if(is_page('galeria')):
-        wp_enqueue_script('scripts', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'),'12.11.0', null );
+        wp_enqueue_script('lightboxJS', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'),'12.11.0', null );
     endif;
     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery','slicknavJS'), null );
     

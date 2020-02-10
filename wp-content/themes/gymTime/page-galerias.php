@@ -33,8 +33,11 @@ get_header();
         ;?>
         <ul class="galeria-imagenes">
                 <?php 
+                    $i = 1;
                     foreach($galeria_imagenes_ID as  $id):
-                        $imagenThumb = wp_get_attachment_image_src($id, 'square')[0]  ;    
+                        $size = ($i == 4 || $i ==6 ) ? 'portrait' : 'square';
+                        $imagenThumb = wp_get_attachment_image_src($id, $size)[0]  ;    
+                        $imagen =  wp_get_attachment_image_src($id, 'full')[0]  ;
                             
                         // echo "<pre>";
                         // var_dump($imagenThumb[0]);
@@ -42,12 +45,14 @@ get_header();
                     ?>
 
                     <li>
-                        <img src="<?php echo $imagenThumb; ?>" alt="imagen">
-
+                        <a href="<?php echo $imagen; ?>" data-lightbox="galeria">
+                            <img src="<?php echo $imagenThumb; ?>" alt="imagen">
+                        </a>
                     </li>
 
+ 
 
-                    <?php  endforeach;?>
+                    <?php $i++; endforeach;?>
 
 
 
