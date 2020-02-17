@@ -241,7 +241,7 @@
         color: var(--colorPrimario)
     }
     /* footer */
-    
+
     .contenido-footer {
         padding: 4rem 0;
     }
@@ -341,7 +341,7 @@
 
     /* Componentes de CARDS */
 
-    .lista-clases{
+    .lista-clases , .listado-blog{
         margin-top:4rem;
         text-align: center;
        /* display: block;*/
@@ -372,7 +372,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 
     @media (min-width: 768px) {
-        .lista-clases{
+        .lista-clases, .listado-blog{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between; 
@@ -422,6 +422,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
       
     }
 
+
+    .card .contenido .meta,
+    .card .contenido .meta a {
+        color: var(--black);
+    }
+
+    .card .contenido .meta span{
+        color: var(--colorPrimario);
+        font-weight: bold;
+    }
+    @media (min-width: 768px) {
+        
+    .card .contenido .meta,
+    .card .contenido .meta a {
+        color: var(--blanco);
+
+
+    }
+    }
 
     /** Clases sidebar */
       .clase-sidebar{
@@ -497,4 +516,65 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
             grid-column: 1/2;
             grid-row: 3/5;
         }
+    }
+
+    .card{
+        margin-bottom:  4rem;
+        border-bottom: 1px solid var(--grisOscuro);;
+    }
+
+    .card:last-of-type{
+        border-bottom: none;
+    }
+
+    .post-categories{
+        display: flex;
+      
+    }
+
+
+    
+}
+@media (min-width: 768px) {
+    .post-categories{
+        position: absolute;
+        top:2rem;
+        left:2rem;
+        z-index: 10;
+        display: flex;
+    }
+
+    
+}
+
+
+
+   
+    .post-categories li{
+        background-color: var(--colorPrimario);
+        padding: .5rem 2rem;
+        margin-right: 2rem;
+        border-radius: 5px;
+    }
+
+    @media (min-width: 768px) {
+        .post-categories li{
+            background-color: var(--colorPrimario);
+        }
+
+        
+    }
+
+    @media (min-width: 768px) {
+        .post-categories li a {
+            color: var(--blanco);
+        }
+    }
+    .post-categories li a{
+        font-size: 2.2rem;
+        font-family: var(--fuentePrincipal);
+        color: var(--blanco);
+    }
+    .post-categories li:last-of-type{
+        border:none;
     }
