@@ -22,8 +22,8 @@
 
                 </div>
             </li>    
-
+            
 
 
         <?php endwhile ;?>
-    </ul>
+</ul>

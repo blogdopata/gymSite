@@ -25,7 +25,7 @@
  
 
 
-        <?php  get_template_part('template-parts/loop','blog') ;?>
+        <!-- <?php  get_template_part('template-parts/loop','blog') ;?> -->
 </main>
 
 
