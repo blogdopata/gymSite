@@ -605,3 +605,49 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     .post-categories li:last-of-type{
         border:none;
     }
+
+
+    /* Contactos */ 
+
+    .wpcf7-form label{
+        font-weight: 700;
+    }
+
+    .wpcf7-form .wpcf7-form-control{
+        width:100%;
+        padding:1rem;
+        height: 4rem;
+        border:1px solid rebeccapurple;
+    }
+    .wpcf7-form .wpcf7-textarea{
+        height: 20rem;
+    }
+    .wpcf7-form .wpcf7-submit{
+        background-color: var(--colorPrimario);
+        font-style: 2rem;
+
+        font-family: var(--fuentePrincipal);
+        color:white;
+    }
+
+    .wpcf7-form .wpcf7-submit:hover{
+        cursor: pointer;
+    }
+    div.wpcf7-response-output{
+        background-color: rebeccapurple;
+        color: var(--blanco);
+        border-color: red;
+    }
+    span.wpcf7-not-valid-tip{
+        background-color: red;
+        color:white;
+        margin-top: 10px;
+    }
+
+
+
+    /* mapa */ 
+
+    #mapa{
+        height: 350px;
+    }
