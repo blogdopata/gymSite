@@ -8,6 +8,7 @@
 /** Consukltas Reutilizables  */
 
 require get_template_directory() . '/inc/queries.php' ;
+require get_template_directory() . '/inc/shortcode.php' ;
 
 
 
@@ -31,6 +32,7 @@ function gymfitness_setup(){
     add_image_size('cajas', 400, 375, true);
     add_image_size('mediano', 550, 300, true);
     add_image_size('blog',966, 644, true);
+
     
 }
 
