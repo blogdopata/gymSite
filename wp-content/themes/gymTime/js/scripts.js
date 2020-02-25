@@ -10,16 +10,23 @@ $(document).ready(() => {
 
     // MAPA D LEAFTLET
 
-    var map = L.map('mapa').setView([51.505, -0.09], 13);
+    var latx = document.querySelector('#lat').value ,
+          lngx = document.querySelector('#lng').value ,      
+          direccion = document.querySelector('#direccion').value ;
+           // alert(direccion)
+    console.log(latx + 'fuck');
+  
+    if(latx && lngx && direccion){
+        var map = L.map('mapa').setView([latx, lngx], 50);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-    
-    L.marker([51.5, -0.09]).addTo(map)
-        .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-        .openPopup();
-
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenS hahatreetMap</a> contributors'
+        }).addTo(map);
+        
+        L.marker([latx, lngx]).addTo(map)
+            .bindPopup(direccion)
+            .openPopup();
+    }
 
 })
 
