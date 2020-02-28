@@ -59,6 +59,12 @@
                 <?php 
                     $area4 = get_field('area_4');
      
+                echo '<pre>';
+                
+                echo var_dump($area4);
+                echo '</pre>';
+                
+
                     $imagen = wp_get_attachment_image_src($area4['area_imagen'] , 'mediano')[0];
      
                 ?>
